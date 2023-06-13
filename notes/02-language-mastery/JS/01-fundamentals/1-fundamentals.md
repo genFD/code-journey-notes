@@ -37,7 +37,7 @@
 
 - The var keyword is used in pre-ES6 versions of JS
 
-- let`is the preferred way to declare a variable when it can be reassigned, and`const` is the preferred way to declare a variable with a constant value
+- let `is the preferred way to declare a variable when it can be reassigned`, and `const` is the preferred way to declare a variable with a constant value
 
 - let variables can be changed (reassigned ) after they’re created.
 - const variables cannot be changed after they’re created.

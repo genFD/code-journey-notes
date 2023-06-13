@@ -383,7 +383,6 @@ Let’s break down what’s happening in the example:
 - We can write multiple await statements to produce code that reads like synchronous code.
 - We use try...catch statements within our async functions for error handling.
 - We should still take advantage of concurrency by writing async functions that allow asynchronous actions to happen in concurrently whenever possible.
-  >
 
 JavaScript is non-blocking: instead of stopping the execution of code while it waits, JavaScript uses an `event-loop` which allows it to efficiently **execute other tasks while it awaits the completion of these asynchronous actions.**
 

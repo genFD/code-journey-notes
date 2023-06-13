@@ -6,10 +6,13 @@
 - [📚 Other Useful resources](#other-useful-resources)
 - [🎯 Learning Objectives](#learning-objectives)
 - [📝 Notes](#notes)
+
   - [Currying in JavaScript](#currying-in-javascript)
+
     - [How currying works](#how-currying-works)
     - [Currying with Arrow Functions](#currying-with-arrow-functions)
     - [Currying in Context](#currying-in-context)
+
   - [Hoisting in JavaScript](#hoisting-in-javascript)
   - [Concurrency Model and Event Loop in JavaScript](#concurrency-model-and-event-loop-in-javascript)
     - [Why Do We Need an Event Loop?](#concurrency-model-and-event-loop-in-javascript)

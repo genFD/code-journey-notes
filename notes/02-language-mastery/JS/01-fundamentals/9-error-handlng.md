@@ -6,7 +6,9 @@
 - [📚 Other Useful resources](#other-useful-resources)
 - [🎯 Learning Objectives](#learning-objectives)
 - [📝 Notes](#notes)
+
   - [Thinking about errors differently](#thinking-about-errors-differently)
+
     - [Errors in Your Code Mean You’re Trying To Do Something Cool](#errors-in-your-code-mean-youre-trying-to-do-something-cool)
     - [Tools to tackle errors](#tools-to-tackle-errors)
       - [Dissect the Error](#dissect-the-error)
@@ -15,12 +17,16 @@
       - [Compare Different Use Cases to Yours](#compare-different-use-cases-to-yours)
       - [Try to implement the solution](#try-to-implement-the-solution)
       - [If It Doesn’t Work, Repeat Steps 2-4.](#if-it-doesnt-work-repeat-steps-2-4)
+
   - [Debugging JS code](#debugging-js-code)
+
     - [Error Stack Traces](#error-stack-traces)
     - [Reading Error Stack Traces](#reading-error-stack-traces)
     - [JavaScript Error Types](#javascript-error-types)
     - [Debugging Errors](#debugging-errors)
+
   - [Handling Errors](#error-handling)
+
     - [Runtime errors](#runtime-errors)
     - [Constructing an Error](#constructing-an-error)
     - [Throw an error](#the-throw-keyword)

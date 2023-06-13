@@ -24,7 +24,7 @@
 ## Learning Objectives
 
 - Learn how to set up your CSS file structure
-- Learn How to use selectors to apply styles to specific elements.
+- Learn how to use selectors to apply styles to specific elements.
 
 ## Notes
 
@@ -81,7 +81,7 @@ To style an HTML element,
 
 - the style attribute is set equal to color: red which will set the color of the paragraph text to red within the browser.
 
-If you’d like to add more than one style with inline styles, simply keep adding to the style attribute. Make sure to end the styles with a semicolon (;)
+If you’d like to add more than one style with inline styles, simply keep adding to the style attribute. Make sure to end the styles with a semicolon.
 
 ```html
 <p style="color: red; font-size: 20px;">I'm learning to code!</p>
