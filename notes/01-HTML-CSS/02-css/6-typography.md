@@ -138,7 +138,7 @@ p {
 
 #### Line Height
 
-We can use the `line-height` property to set how tall we want each line containing our text to be. Line height values can be a unitless number, such as 1.2, or a length value, such as 12px, 5% or 2em.
+We can use the `line-height` property `to set how tall we want each line containing our text to be`. Line height values can be a unitless number, such as 1.2, or a length value, such as 12px, 5% or 2em.
 
 ![Line height](/Notes/notes/01-HTML-CSS/assets/htmlcss1-diagram__leading_updated_1-01.svg)
 
