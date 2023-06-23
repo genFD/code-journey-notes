@@ -32,12 +32,12 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-![CSS anatomy](/notes/01-HTML-CSS/assets/CSS_Anatomy-v2-nobgfill.svg)
+![CSS anatomy](/Notes/notes/01-HTML-CSS/assets/CSS_Anatomy-v2-nobgfill.svg)
 
 The diagram shows two different methods, or syntaxes, for writing CSS code.
 
-- The first syntax shows CSS applied as a ruleset,
-- while the second shows it written as an inline style.
+- The first syntax shows CSS applied as a `ruleset,`
+- while the second shows it written as an `inline style`.
 
 **Terminology:**
 
@@ -127,7 +127,7 @@ After adding opening and closing `<style>` tags in the head section, you can beg
 Because of SOC, it's recommended to avoid mixing HTML (the structure) and CSS code(styling).
 You can create an external stylesheet by using the `.css file` name extension, like so: `style.css`.
 
-When HTML and CSS codes are in separate files, the files must be linked.
+When HTML and CSS codes are in separate files, `the files must be linked`.
 You can use the `<link>` element to link HTML and CSS files together.
 The `<link>` element must be placed within the head of the HTML file.
 It is a self-closing tag and requires the following attributes:

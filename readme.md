@@ -42,6 +42,12 @@
 
 Feel free to contact me at <mailto:hermann.kan@proton.com>
 
+About me :
+
+- Frontend development using React
+
+Backend in nodejs (express.js, nestjs), exposing RESTful APIs that perform CRUD operations on a Dynamo table,
+
 - Website - [my website](https://www.hkf.com)
 - Github - [@hermkan](https://github.com/hermkan)
 
