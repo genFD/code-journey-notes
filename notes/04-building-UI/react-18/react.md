@@ -1229,3 +1229,115 @@ export default Controlled
 ```
 
 - In this way, the field is going to show Hello React when it is rendered, but then the user can type anything inside and change its value.
+
+```jsx
+const [values, setValues] = useState({
+  firstName: 'Carlos',
+  lastName: 'Santana',
+})
+```
+
+The handlers are the same as the previous ones:
+
+```jsx
+const handleChange = ({ target: { name, value } }) => {
+  setValues({
+    [name]: value,
+  })
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+
+  console.log(`${values.firstName} ${values.lastName}`)
+}
+```
+
+- In fact, we will use the value attributes of the input fields to set their initial values, as well as the updated one
+
+```jsx
+return (
+  <form onSubmit={handleSubmit}>
+    <input
+      type="text"
+      name="firstName"
+      value={values.firstName}
+      onChange={handleChange}
+    />
+    <input
+      type="text"
+      name="lastName"
+      value={values.lastName}
+      onChange={handleChange}
+    />
+    <button>Submit</button>
+  </form>
+)
+```
+
+- The first time the form is rendered, React uses the initial values from the state as the value of the input fields. When the user types something into the field, the handleChange function is called and the new value for the field is stored in the state
+
+- When the state changes, React re-renders the component and uses it again to reflect the current values of the input fields. We now have full control over the values of the fields, and we call this pattern controlled components
+
+### Handling events
+
+React introduced the concept of the synthetic event. A synthetic event is an object that wraps the original event object provided by the browser, and it has the same properties, no matter where it is created.
+
+```jsx
+const Button = () => {}
+export default Button
+```
+
+Then we define the event handler:
+
+```jsx
+const handleClick = (syntheticEvent) => {
+  console.log(syntheticEvent instanceof MouseEvent)
+  console.log(syntheticEvent.nativeEvent instanceof MouseEvent)
+}
+```
+
+- we check the type of the event object we receive from React and the type of native event attached to it.
+
+- We expect the first to return false and the second to return true.
+
+- Finally, we define the button with the onClick attribute to which we attach our event listener:
+
+```jsx
+return <button onClick={handleClick}>Click me!</button>
+```
+
+- suppose we want to attach a second handler to the button that listens to the double-click event
+
+- a common practice is to write a single event handler for each component, which can trigger different actions according to the event type.
+
+```jsx
+const handleEvent = (event) => {
+  switch (event.type) {
+    case 'click':
+      console.log('clicked')
+      break
+
+    case 'dblclick':
+      console.log('double clicked')
+      break
+
+    default:
+      console.log('unhandled', event.type)
+  }
+}
+```
+
+- The generic event handler receives the event object and switches on the event type to fire the right action. This is particularly useful if we want to call a function on each event (for example, analytics) or if some events share the same logic.
+
+- Finally, we attach the new event listener to the onClick and onDoubleClick attributes:
+
+```jsx
+return (
+  <button onClick={handleEvent} onDoubleClick={handleEvent}>
+    Click me!
+  </button>
+)
+```
+
+- From this point on, whenever we need to create a new event handler for the same component, instead of creating a new method and binding it, we can just add a new case to the switch.
