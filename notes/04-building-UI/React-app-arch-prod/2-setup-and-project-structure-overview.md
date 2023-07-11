@@ -34,7 +34,7 @@
 
 #### Why Next?
 
-- Very easy to get started with: In the early days of React, it was very challenging to start a project. To get a simple page on the screen, we had to deal with many tools such as Webpack, Babel, and others. We still use those tools today, `but fortunately`, most tooling configuration is hidden from us with an interface to extend the configuration if required
+- Very easy to get started with: In the early days of React, it was very challenging to start a project. To get a simple page on the screen, we had to deal with many tools such as Webpack, Babel, and others. We still use those tools today, `but fortunately`, most tooling configuration is hidden from us with an interface to extend the configuration if required.
 
 - Besides the challenges of setting up the project, it is very challenging to `maintain all those dependencies over time`. Next.js hides all those complexities away from developers and allows them to get started quickly with a new project
 

@@ -6,6 +6,36 @@
 - [📚 Other Useful resources](#other-useful-resources)
 - [🎯 Learning Objectives](#learning-objectives)
 - [📝 Notes](#notes)
+- [Benefits of having a good app architecture](#benefits-of-having-a-good-application-architecture)
+  - [Good foundation for the project](#a-good-foundation-for-the-project)
+  - [Easier project management](#easier-project-management)
+  - [Increased development speed and productivity](#increased-development-speed-and-productivity)
+- [Exploring the architectural challenges of React applications](#exploring-the-architectural-challenges-of-react-applications)
+  - [What are the challenges when building a React application?](#what-are-the-challenges-when-building-a-react-application)
+    - [What project structure are we using?](#what-project-structure-are-we-using)
+    - [What rendering strategy are we using?](#what-rendering-strategy-are-we-using)
+    - [What state management solution are we using?](#what-state-management-solution-are-we-using)
+    - [What styling solution are we using?](#what-styling-solution-are-we-using)
+    - [How are we going to handle user authentication?](#how-are-we-going-to-handle-user-authentication)
+    - [What testing strategies are we going to use?](#what-testing-strategies-are-we-going-to-use)
+- [Understanding architectural decisions when building React applications](#understanding-architectural-decisions-when-building-react-applications)
+  - [Bad architectural decisions](#bad-architectural-decisions)
+    - [Flat project structure](#flat-project-structure)
+    - [Large, tightly coupled components](#large-tightly-coupled-components)
+    - [Unnecessary global state](#unnecessary-global-state)
+    - [Using the wrong tools to solve problems](#using-the-wrong-tools-to-solve-problems)
+    - [Putting the entire application in a single component in a single file](#putting-the-entire-application-in-a-single-component-in-a-single-file)
+    - [Not sanitizing user inputs](#not-sanitizing-user-inputs)
+    - [Using unoptimized infrastructure to serve our application](#using-unoptimized-infrastructure-to-serve-our-application)
+  - [Good architectural decisions](#good-architectural-decisions)
+    - [Better structured project structure based on domain and features](#better-structured-project-structure-based-on-domain-and-features)
+    - [Better state management](#better-state-management)
+    - [Smaller components](#smaller-components)
+    - [Separation of concerns](#separation-of-concerns)
+    - [Static code analysis](#static-code-analysis)
+    - [Deploying the application over a CDN](#deploying-the-application-over-a-cdn)
+- [Planning our application](#planning-our-application)
+  - [What are we building?](#what-are-we-building)
 
 ## Resources
 
@@ -21,11 +51,11 @@
 
 - What are the architectural challenges of React applications ?
 
-- What architectural decisions when building React applications
+- What are architectural decisions when building React applications?
 
-- How to plan your application
+- How to plan your application?
 
-**learn to think a bit more from the architectural point of view when starting React application development.**
+**Learn to think a bit more from the architectural point of view when starting React application development.**
 
 ## Notes
 
@@ -43,17 +73,21 @@
 
 ---
 
-- A good foundation for the project
-- Easier project management
-- Increased development speed and productivity
-- Cost-effectiveness
-- Better product quality
+1. A good foundation for the project
+2. Easier project management
+3. Increased development speed and productivity
+4. Cost-effectiveness
+5. Better product quality
 
 #### A good foundation for the project
+
+[⬆️ Back to top](#table-of-contents)
 
 Multiple factors cause various changes during a project’s lifetime, such as changes in requirements, organization, technologies, market, finance, and more. Being built on solid foundations will make it resilient to all those changes.
 
 #### Easier project management
+
+[⬆️ Back to top](#table-of-contents)
 
 Having `different components organized properly` will make `organizing and delegating tasks much easier`, especially if a larger team is involved.
 
@@ -63,11 +97,15 @@ It also allows `better estimates` to be made regarding how much time is required
 
 #### Increased development speed and productivity
 
-Having a good architecture defined allows developers to focus on the product they are building without overthinking the technical implementations since most of the technical decisions should have already been made.
+[⬆️ Back to top](#table-of-contents)
+
+Having a good architecture defined `allows developers to focus on the product` they are building `without overthinking the technical implementations since most of the technical decisions should have already been made`.
 
 Besides that, it will provide a smoother onboarding process for new developers, who can be productive quickly after familiarizing themselves with the overall architecture.
 
 #### Cost-effectiveness
+
+[⬆️ Back to top](#table-of-contents)
 
 In most cases, the most expensive cost of every project is people and their work and time. Therefore, by allowing them to be more efficient, we can reduce some redundant costs a bad architecture could bring.
 
@@ -75,11 +113,15 @@ It will also allow better financial analysis and planning of pricing models for 
 
 #### Better product quality
 
+[⬆️ Back to top](#table-of-contents)
+
 Making all team members productive gives them time to focus and spend more time on important things, such as the business requirements and the needs of users, rather than spending most of the time fixing bugs and reducing technical debt.
 
 - Better product quality will also make our users more satisfied, which should be the end goal
 
 ### Exploring the architectural challenges of React applications
+
+[⬆️ Back to top](#table-of-contents)
 
 `Learning Objectives Recap`
 
@@ -95,19 +137,21 @@ Making all team members productive gives them time to focus and spend more time 
 
 #### What are the challenges when building a React application?
 
+[⬆️ Back to top](#table-of-contents)
+
 Some of the most frequent questions when starting with a new React application are as follows:
 
-```mdx
-    What project structure are we using?
-    What rendering strategy are we using?
-    What state management solution are we using?
-    What styling solution are we using?
-    What data fetching approach are we using?
-    How are we going to handle user authentication?
-    What testing strategies are we going to use?
-```
+1. What project structure are we using?
+2. What rendering strategy are we using?
+3. What state management solution are we using?
+4. What styling solution are we using?
+5. What data fetching approach are we using?
+6. How are we going to handle user authentication?
+7. What testing strategies are we going to use?
 
 ##### What project structure are we using?
+
+[⬆️ Back to top](#table-of-contents)
 
 Dan Abramov, one of the maintainers of React, says on this:
 
@@ -117,6 +161,8 @@ And that is a very good point. It will mostly depend on the nature of the applic
 
 ##### What rendering strategy are we using?
 
+[⬆️ Back to top](#table-of-contents)
+
 It depends on the nature of our application.
 
 1. If we are building an internal dashboard application, a single-page application is more than enough.
@@ -124,6 +170,8 @@ It depends on the nature of our application.
 2. On the other hand, if we are building a customer-facing application that should also be public and SEO-friendly, we should think about `server-side rendering or static generation`, depending on how often the data on the pages are being updated.
 
 ##### What state management solution are we using?
+
+[⬆️ Back to top](#table-of-contents)
 
 React comes with built-in state management mechanisms with its hooks and Context API, but for more complex applications, we often reach for external solutions such as Redux, MobX, Zustand, Recoil, and others.
 
@@ -146,6 +194,8 @@ At the end of the day, it all depends on the application’s needs and the natur
 
 ##### What styling solution are we using?
 
+[⬆️ Back to top](#table-of-contents)
+
 This one mostly `depends on preference`. Some people prefer vanilla CSS, some people love utility-first CSS libraries such as Tailwind, and some developers can’t live without CSS in JS.
 
 Making this decision `should also depend on whether our application will be re-rendered very often`. If that is the case, we might consider `build-time solutions` such as vanilla CSS, SCSS, Tailwind, and others. Otherwise, we can use `runtime styling solutions` such as Styled Components, Emotion, and more.
@@ -153,6 +203,8 @@ Making this decision `should also depend on whether our application will be re-r
 We should also keep in mind whether we want to use a pre-built component library or if we want to build everything from scratch.
 
 ##### How are we going to handle user authentication?
+
+[⬆️ Back to top](#table-of-contents)
 
 This depends on the `API implementation`.
 
@@ -163,12 +215,16 @@ It is considered to be safer to use cookie-based authentication with httpOnly co
 
 ##### What testing strategies are we going to use?
 
-This depends on the team structure, so if we have `QA engineers available`, we will be able to let them do end-to-end tests.
+[⬆️ Back to top](#table-of-contents)
 
-It also depends on how much time we can devote to testing and other aspects.
+This `depends on the team structure`, so if we have `QA engineers available`, we will be able to let them do end-to-end tests.
+
+It also `depends on how much time we can devote to testing` and other aspects.
 Keep in mind that we should always consider having some level of testing, at least integration, and end-to-end testing for the most critical parts of our application.
 
 ### Understanding architectural decisions when building React applications
+
+[⬆️ Back to top](#table-of-contents)
 
 `Learning Objectives Recap`
 
@@ -184,13 +240,19 @@ Keep in mind that we should always consider having some level of testing, at lea
 
 #### Bad architectural decisions
 
+[⬆️ Back to top](#table-of-contents)
+
 Let’s look at some of the bad architectural decisions that might slow us down.
 
 ##### Flat project structure
 
+[⬆️ Back to top](#table-of-contents)
+
 Imagine having a lot of components, all living in the same folder. The simplest thing to do is to place all the React components within the components folder, which is fine if our components count does not exceed 20 components. After that, it becomes difficult to find where a component should belong because they are all mixed.
 
 ##### Large, tightly coupled components
+
+[⬆️ Back to top](#table-of-contents)
 
 Having large and coupled components have a couple of downsides.
 
@@ -200,53 +262,79 @@ Having large and coupled components have a couple of downsides.
 
 ##### Unnecessary global state
 
+[⬆️ Back to top](#table-of-contents)
+
 Having a global state is fine, and often required. But keeping too many things in a global state can be a bad idea. It might affect performance, but also maintainability because it makes it difficult to understand the scope of the state.
 
 ##### Using the wrong tools to solve problems
+
+[⬆️ Back to top](#table-of-contents)
 
 The number of choices in the React ecosystem makes it easier to choose the wrong tools to solve a problem – for example, `caching server responses in the global store`. It may be possible, and we have been doing this in the past, but that doesn’t mean we should keep doing that because there are tools to solve this problem, such as `React Query`, `SWR`, `Apollo Client`, and so on.
 
 ##### Putting the entire application in a single component in a single file
 
+[⬆️ Back to top](#table-of-contents)
+
 This is something that shouldn’t ever happen, but it is still worth mentioning. Nothing is preventing us from creating a complete application in a single file. It could be thousands of lines long – that is, a single component that would do everything. But for the same reason as having large components, it should be avoided.
 
 ##### Not sanitizing user inputs
+
+[⬆️ Back to top](#table-of-contents)
 
 Many hackers on the web are trying to steal our user’s data. Therefore, we should do everything possible to prevent such things from happening. By sanitizing user inputs, we can prevent hackers from executing some malicious piece of code in our application and stealing user data. For example, we should prevent our users from inputting anything that could be executed in our application by removing any parts of the input that might be risky.
 
 ##### Using unoptimized infrastructure to serve our application
 
+[⬆️ Back to top](#table-of-contents)
+
 Using unoptimized infrastructure to serve our application will make our application slow when accessed from different parts of the world.
 
 #### Good architectural decisions
+
+[⬆️ Back to top](#table-of-contents)
 
 Let’s look at some of the good decisions we can make to make our application better.
 
 ##### Better structured project structure based on domain and features
 
+[⬆️ Back to top](#table-of-contents)
+
 Splitting the application structure into different features or domain-specific modules, each responsible for its own role, will allow better separation of concerns of different application pieces, better modularity of different parts of the application, better flexibility, and scalability.
 
 ##### Better state management
+
+[⬆️ Back to top](#table-of-contents)
 
 Instead of putting everything in a global state, we should start by defining a piece of a state as close as possible to where it is being used in the component and lift it only if necessary.
 
 ##### Smaller components
 
+[⬆️ Back to top](#table-of-contents)
+
 Having smaller components will make them more testable, easier to track changes, and easier to work in larger teams.
 
 ##### Separation of concerns
+
+[⬆️ Back to top](#table-of-contents)
 
 Have each component do as little as possible. This makes components easy to understand, test, modify, and even reuse.
 
 ##### Static code analysis
 
-Relying on static code analysis tools such as ESLint, Prettier, and TypeScript will improve our code quality without us having to think too much about it. We just need to configure these tools, and they will let us know when something is wrong with our code. These tools also introduce consistency in the code base regarding formatting, code practices, and documentation
+[⬆️ Back to top](#table-of-contents)
+
+Relying on static code analysis tools such as ESLint, Prettier, and TypeScript will improve our code quality without us having to think too much about it. We just need to configure these tools, and they will let us know when something is wrong with our code. These tools also `introduce consistency` in the code base regarding formatting, code practices, and documentation
 
 ##### Deploying the application over a CDN
+
+[⬆️ Back to top](#table-of-contents)
 
 Having users worldwide means our application should be functional and accessible from all over the world. By deploying the application on a CDN, users all over the world can access the application in the most optimal way.
 
 ### Planning our application
+
+[⬆️ Back to top](#table-of-contents)
 
 `Learning Objectives Recap`
 
@@ -262,7 +350,11 @@ Now, let’s apply the principles we just learned about to a real-world scenario
 
 #### What are we building?
 
-We will be building `an application that allows organizations to manage their job boards`. The organization `admins can create job postings` for their organizations, and `the candidates can apply for the jobs`.
+[⬆️ Back to top](#table-of-contents)
+
+We will be building `an application that allows organizations to manage their job boards`.
+
+The organization `admins can create job postings` for their organizations, and `the candidates can apply for the jobs`.
 
 We will be `building an MVP version` of the application `with the minimum set of features`, but it should be extendable for more features in the future. At the end of this book, we will cover the features that the final application could have, but to keep things simple, we will be focusing on the MVP version.
 

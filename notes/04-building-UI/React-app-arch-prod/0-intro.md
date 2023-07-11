@@ -26,7 +26,3 @@
 - The book will also share practices for testing, securing, and packaging your app in a structured way.
 
 - Finally, you will learn how to deploy your app to production with scalability in mind
-
-## Notes
-
-What Happens when we browse to a website ?

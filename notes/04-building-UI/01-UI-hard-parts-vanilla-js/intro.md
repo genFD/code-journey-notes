@@ -1,9 +1,32 @@
 # Intro
 
-DOM :
-An object that contains all the elements that the user sees on the page.
+## Learning Objectives
 
-Model of the page(document) stored in an object format in C++ that enables us to write in HTML, code, to describe what we want to see on the page and under the hood the render engine will transform that list(model) into a page.
+Main GOAL :
+
+**Develop an under the hood understanding of building UI in the browser.**
+
+PART I
+
+- Understanding how can we build the most minimal UI in the web browser ?
+
+PART II
+
+PART III
+
+- Build in JS a visual representation of what is going to show up on the page. (virtual DOM)
+
+PART IV
+
+- Building with state hooks and diffing algorithm to improve performance
+
+**DOM : Dcoument object Model.**
+
+> An object that contains all the elements that the user sees on the page.
+
+Model of the page(document) stored in an object format in C++ that enables us to write in HTML, code to describe what we want to see on the page.
+
+Under the hood, the render engine will transform that list (model) into a page.
 
 ## A list of elements in C++ to add to the page
 
@@ -196,7 +219,7 @@ jsInput.onInput = handleInput
 2. three nodes are added to the DOM(list)
 3. Adding the `script node` triggers JS engine
 4. defining the variable post and assign to it an empty string
-5. defining the constant jsInput and assign to it the result of calling the querySelector method passing in the string input. As a result, an accesor object is created with an hidden link to the input element on the DOM. This object is also full of getters and setters methods that allows us to interact with this DOM element such as `value`, `onInput`
+5. defining the constant jsInput and assign to it the result of calling the querySelector method passing to it the string input. As a result, an accesor object is created with an hidden link to the input element on the DOM. This object is also full of getters and setters methods that allows us to interact with this DOM element such as `value`, `onInput`
 
 6. defining the constant jsDiv and assign to it the result of calling the querySelector method passing in the string div. As a result, an accesor object is created with an hidden link to the first div element on the DOM. This object is also full of getters and setters methods that allows us to interact with the DOM element such as , `textContent`
 
