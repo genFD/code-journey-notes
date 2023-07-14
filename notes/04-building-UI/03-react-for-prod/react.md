@@ -892,7 +892,7 @@ Let's explore some concepts that are commonly used in React of which you should 
 
 -> Check FP
 
-## Popular Composition patterns
+### Popular Composition patterns
 
 _learning goal:_
 
