@@ -1,12 +1,12 @@
 # `💼 Table of contents - Notes`
 
-- [>\_ 🎨 HTML & CSS](https://github.com/hermkan/code-journey-notes/blob/main/docs/1-html-css.md)
+- [>\_ 🎨 HTML & CSS](https://github.com/hermkan/code-journey-notes/tree/main/notes/01-HTML-CSS)
 
-- [🥋 Language mastery](https://github.com/hermkan/code-journey-notes/blob/main/docs/3-language-mastery.md)
+- [🥋 Language mastery](https://github.com/hermkan/code-journey-notes/tree/main/notes/02-language-mastery)
 
-- [🌿 Git and Github](https://github.com/hermkan/code-journey-notes/blob/main/docs/2-git-github.md)
+- [🌿 Git and Github](https://github.com/hermkan/code-journey-notes/tree/main/notes/03-git-github)
 
-- [💻 Building UI](https://github.com/hermkan/code-journey-notes/blob/main/docs/4-building-ui.md)
+- [💻 Building UI](https://github.com/hermkan/code-journey-notes/tree/main/notes/04-building-UI)
 
 - [📟 Terminal Usage](https://github.com/hermkan/code-journey-notes/blob/main/docs/5-terminal-usage.md)
 
@@ -43,10 +43,6 @@
 Feel free to contact me at <mailto:hermann.kan@proton.com>
 
 About me :
-
-- Frontend development using React
-
-Backend in nodejs (express.js, nestjs), exposing RESTful APIs that perform CRUD operations on a Dynamo table,
 
 - Website - [my website](https://www.hkf.com)
 - Github - [@hermkan](https://github.com/hermkan)
