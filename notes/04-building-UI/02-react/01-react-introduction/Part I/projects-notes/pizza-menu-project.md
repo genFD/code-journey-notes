@@ -1,10 +1,12 @@
 # WORKING WITH COMPONENTS, PROPS, AND JSX
 
+- Components tree
+
+![component tree](../assets/comp-tree.png)
+
 Key Ideas :
 
 - Props are used to pass data from parent to components
-
-![Props](../assets/1-working-with=props.png)
 
 - Anything can be passed as props: single values, arrays, objects, functions, even other components
 
