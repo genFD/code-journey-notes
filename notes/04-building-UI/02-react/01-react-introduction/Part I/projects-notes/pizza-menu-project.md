@@ -51,7 +51,7 @@ function Header() {
 
 ## The `Menu` component
 
-- The `menu` component displays a list of pizzas.
+- The `menu` component displays a list of pizzas. We can accomplish this like this :
 
 ```jsx
 function Menu() {
@@ -98,11 +98,11 @@ function Menu() {
 }
 ```
 
-You can read it as "if `numPizza` is _greater_ than 0" (i.e the list is not empty, so the condition is true) then `(?)` display the list, otherwise `(:)` render `<p>We're still working on our menu. Please come back later </p>`
+You can read it as "if `numPizzas` is _greater_ than 0" (i.e the list is not empty, so the condition is true) then `(?)` display the list, otherwise `(:)` render `<p>We're still working on our menu. Please come back later </p>`
 
-- In react, when you want to display multiple similar components from a collection of data, you can use a JavaScript array method like `map()`. We only need to show several instances of the same component using different data : the `pizza name`, `the image`, the `ingredients`, `the price`.
+- In react, when you want to display multiple similar components from a collection of data, you can use a JavaScript array method like `map()`. We only need to show several instances of the same component using different data : the `pizza name`, `the image`, the `ingredients`, `the price`, and `soldOut`.
 
-1. Our pizzas array look like this:
+1. Our pizzas array looks like this:
 
 ```js
 const pizzaData = [
@@ -237,7 +237,7 @@ passing `pizzaObj` props:
 }
 ```
 
-The final version of our `menu component` :
+The final version of `menu` component :
 
 ```jsx
 function Menu() {
@@ -296,17 +296,16 @@ We used [object destructuring](https://github.com/hermkan/code-journey-notes/blo
 
 You can read it as "if `soldOut` is `true` apply `"sold-out"` css rules otherwise nothing”
 
-we used the same technique to display the string `'SOLD OUT'` or the `price`
+We used the same technique to display the string `'SOLD OUT'` or the `price`.
 
 ```jsx
 <span>{soldOut ? 'SOLD OUT' : `$${price}`}</span>
 ```
 
-The final version of our `menu component` :
+The final version of `pizza` component:
 
 ```jsx
 function Pizza(props) {
-  // destructure the components props and the pizza obj
   const {
     pizzaObj: { name, photoName, ingredients, price, soldOut },
   } = props
