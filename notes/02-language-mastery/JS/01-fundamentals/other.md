@@ -1,4 +1,4 @@
-[course](https://anjana.dev/javascript-first-steps/)
+<!-- [course](https://anjana.dev/javascript-first-steps/)
 
 - Part 1
 
@@ -36,4 +36,4 @@ Map & Filter
 Destructuring & spread syntax
 Debugging & error handling
 Modules, import & export
-Course recap & next steps
+Course recap & next steps -->
